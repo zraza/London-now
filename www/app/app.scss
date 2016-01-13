@@ -1,0 +1,248 @@
+.view,
+.pane,
+ion-view,
+.modal {
+    background: url('../assets/images/london.jpg') no-repeat;
+    background-color: rgba(74, 135, 238, 1);
+}
+
+ion-view {}
+
+.bg-clear {
+    background: transparent;
+}
+
+h1,
+h2,
+h4,
+h5 {
+    color: #fff;
+    font-weight: 500;
+    margin: 5px;
+}
+
+h2 {
+    //font-size: 20px !important;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.update-content {
+    a {
+        color: #fff;
+    }
+    .list {
+        margin-bottom: -2px;
+        .item {
+            //border: 0;
+            margin: 0;
+            &.item-positive {
+                background-color: rgba(74, 135, 238, 0.7);
+                border: 0;
+            }
+            &.item-calm {
+                background-color: rgba(67, 206, 230, 0.3);
+                //border:0 !important;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .badge {
+                    top: 7px;
+                }
+            }
+        }
+    }
+}
+
+.slide {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+    .list {
+        h2,
+        h3 {
+            margin-right: 30px;
+        }
+        .item {
+            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .bus-item {
+            background-color: rgba(0, 0, 0, 0);
+            color: rgba(255, 255, 255, 0.9);
+            //border: 0;
+            padding: 10px;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            .badge {
+                top: 7px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.item-clear {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 0;
+    &.loader {
+        text-align: center;
+        margin-bottom: 1px;
+        height: 100%;
+        span {
+            display: inline-block;
+            padding-top: -10px;
+            padding-left: 10px;
+        }
+        //font-size: 13px;
+        ion-spinner svg {
+            height: 25px;
+        }
+    }
+}
+
+.current-text {
+    //float: right;
+    font-size: 13px;
+    text-align: center;
+}
+
+.current-icon {
+    clear: both;
+    float: right;
+    height: 75px;
+    margin-bottom: -30px;
+    margin-right: -30px;
+}
+
+.ion-close-circled {
+    //color: red;
+}
+
+.train-status {
+    padding: 0;
+    height: 45px;
+    line-height: 35px;
+}
+
+.scroll-refresher .ionic-refresher-content {
+    color: #fff;
+}
+
+.icon-pulling {
+    font-size: 15px;
+}
+
+.item .badge {
+    right: 10px;
+}
+
+.weather-date {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(74, 135, 238, 0.3);
+    padding: 5px 10px;
+}
+
+.platform-ios7.platform-cordova:not(.fullscreen) {
+    .ios7-fix {
+        padding-top: 20px;
+    }
+}
+
+.settings {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.top-icons {
+    .icon {
+        position: absolute;
+        right: 5px;
+        font-size: 25px;
+        color: #fff;
+    }
+}
+
+.weather-holder {
+    .col {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.platform-ios7.platform-cordova.status-bar-hide {
+    margin-bottom: 0;
+}
+
+.button-bar-icons {
+    //border: 1px solid red;
+    .button {
+        @extend .button-clear;
+        @extend .icon;
+        padding: 0 5px !important;
+        min-width: 20px;
+        min-height: 20px;
+        width: 30px !important;
+        //border: 1px solid red;
+        margin: 0 !important;
+    }
+}
+
+.full.modal {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.no-lines {
+    .item {
+        border: 0 !important;
+    }
+}
+
+.no-padding {
+    padding: 0 !important;
+    .row {
+        padding: 0 !important;
+    }
+}
+
+.ionic-refresher-content {
+    .spinner svg {
+        stroke: #fff;
+        fill: #fff;
+        color: #fff;
+    }
+}
+
+.sweet-alert {
+    width: 100%;
+    fieldset{
+    display: none;
+}
+}
+
+.text-tiny{
+    font-size: 10px;
+}
+
+.text-light{color: $light;}
+.text-stable{color: $stable;}
+.text-positive{color: $positive;}
+.text-calm{color: $calm  !important;}
+.text-balanced{color: $balanced;}
+.text-energized{color: $energized;}
+.text-assertive{color: $assertive !important;}
+.text-royal{color: $royal;}
+.text-dark{color: $dark;}

@@ -1,0 +1,8 @@
+{
+  "name": "LondonNow",
+  "app_id": "31c43eae",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
+}

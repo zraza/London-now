@@ -1,0 +1,40 @@
+{
+  "name": "londonnow",
+  "version": "1.0.0",
+  "description": "LondonNow2: An Ionic project",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2",
+    "lazypipe": "^1.0.1",
+    "main-bower-files": "^2.9.0",
+    "require-dir": "^0.3.0",
+    "streamqueue": "^1.1.1",
+    "wiredep": "^2.2.2"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    {
+      "locator": "https://github.com/floatinghotpot/cordova-plugin-admob.git",
+      "id": "cordova-plugin-admob"
+    }
+  ],
+  "cordovaPlatforms": [
+    "ios"
+  ]
+}

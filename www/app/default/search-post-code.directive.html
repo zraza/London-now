@@ -1,0 +1,11 @@
+<form ng-submit="vm.afterSearch();">
+    <label class="item item-input">
+        <input type="text" id="postCode" name="postCode" required ng-model="vm.data.postCode" placeholder="SW1A 2AA" style="text-transform: uppercase">
+    </label>
+</form>
+<ion-item class="item-divider" ng-if="vm.locations.length>0">Previous Searches</ion-item>
+<ion-item ng-repeat="location in vm.locations" ng-click="vm.data.busSearchType='POST_CODE';vm.data.postCode=location.postcode;vm.afterSearch()">
+    <ion-option-button class="button-assertive" ng-click="vm.remove(location)">Delete</ion-option-button>
+    <span class="item-note">{{location.admin_ward}}</span>
+    <p>{{location.postcode}}</p>
+</ion-item>

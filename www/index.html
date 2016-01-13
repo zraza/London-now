@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above-->
+    <link href="css/ionic.app.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="lib/vendors.css" />    
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/vendors.js"></script>
+    <script type="text/javascript" src="lib/xmlToJSON.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+
+    <script type="text/javascript" src="app/configs/configs.module.js"></script>
+    <script type="text/javascript" src="app/configs/configs.service.js"></script>
+
+    <script type="text/javascript" src="app/default/ads/ads.module.js"></script>
+    <script type="text/javascript" src="app/default/ads/ads.service.js"></script>
+
+    <script type="text/javascript" src="app/default/favourite/favourite.module.js"></script>
+    <script type="text/javascript" src="app/default/favourite/toggle-favourite.directive.js"></script>
+
+    <script type="text/javascript" src="app/default/geo-location/geo-location-module.js"></script>
+    <script type="text/javascript" src="app/default/geo-location/geo-location-service.js"></script>
+
+    <script type="text/javascript" src="app/default/default.module.js"></script>
+    <script type="text/javascript" src="app/default/default.configs.js"></script>
+    <script type="text/javascript" src="app/default/default.controller.js"></script>
+    <script type="text/javascript" src="app/default/default.filter.js"></script>
+    <script type="text/javascript" src="app/default/favourite.service.js"></script>
+    <script type="text/javascript" src="app/default/help.directive.js"></script>
+    <script type="text/javascript" src="app/default/pop-up.directive.js"></script>
+    <script type="text/javascript" src="app/default/rate-app.directive.js"></script>
+    <script type="text/javascript" src="app/default/search-post-code.directive.js"></script>
+
+    <script type="text/javascript" src="app/default/bus/bus.module.js"></script>
+    <script type="text/javascript" src="app/default/bus/bus.controller.js"></script>
+    <script type="text/javascript" src="app/default/bus/bus.service.js"></script>
+
+    <script type="text/javascript" src="app/default/train/train.module.js"></script>
+    <script type="text/javascript" src="app/default/train/train.controller.js"></script>
+    <script type="text/javascript" src="app/default/train/train.service.js"></script>
+    <script type="text/javascript" src="app/default/train/train-status-detail.directive.js"></script>
+
+    <script type="text/javascript" src="app/default/weather/weather.module.js"></script>
+    <script type="text/javascript" src="app/default/weather/weather.controller.js"></script>
+    <script type="text/javascript" src="app/default/weather/weather.service.js"></script>
+
+    <script type="text/javascript" src="app/default/postcode/postcode.module.js"></script>    
+    <script type="text/javascript" src="app/default/postcode/postcode.service.js"></script>    
+    
+    
+  </head>
+  <body ng-app="app" style="background:url('assets/images/london.jpg')">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

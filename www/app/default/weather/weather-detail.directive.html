@@ -1,0 +1,33 @@
+<div class="modal full">
+    <ion-header-bar class="bar-positive">
+        <h2 class="title">Weather Forecast</h2>
+        <button class="button button-clear button-primary" ng-click="vm.hide()()">Close</button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list no-line">
+            <div ng-repeat="dayForecast in vm.data.forecast" class="item row item-clear" style="margin-top:2px">
+                <span class="weather-date">
+                {{dayForecast.date}}
+                </span>
+                <div class="col">
+                    <h2 style="font-size:30px;margin-top:30px;">
+                    <span id="temp-hi"><i class="icon ion-arrow-up-c"></i> 
+                        <span>{{dayForecast.high}}
+                        </span>°</span>
+                 </h2>
+                </div>
+                <div class="col">
+                    <h2 style="font-size:30px;margin-top:30px;">
+                    <span id="temp-lo"><i class="icon ion-arrow-down-c"></i> 
+                        <span>{{dayForecast.low}}
+                        </span>°</span>
+                  </h2>
+                </div>
+                <div class="col">
+                    <span class="current-text">{{dayForecast.text}}</span>
+                    <img ng-cloak class="current-icon" ng-src="http://l.yimg.com/a/i/us/nws/weather/gr/{{dayForecast.code}}d.png" />
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</div>

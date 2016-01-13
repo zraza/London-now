@@ -1,0 +1,26 @@
+    <div class="item item-clear item-calm item-icon-right" pop-up="app/default/settings.directive.html" data="vm.settings" style="padding:7px 10px">
+        <h2>{{vm.busListMessage}}</h2>
+        <i class="icon ion-ios-more" ></i>
+    </div>
+<div loader="vm.stops.status">
+    <ion-slide-box disable-scroll="false" show-pager="false">
+        <ion-slide ng-repeat="stop in vm.stops | orderBy:['-favourite','distance']" ng-init="$last ? vm.lastElement() : false" class="slide">
+            <ion-list class="no-lines">
+                <ion-item class="item item-positive item-icon-right icon" toggle-favourite="{{stop.StopCode1}}" ng-click="fav=favourite">
+                    <h2>{{stop.StopPointName}}</h2>
+                    <span class="text-tiny">{{stop.lines.join(', ')}}</span>
+                    <i class="icon" ng-class="{'ion-ios-star': fav||vm.isFavourite(stop.StopCode1), 'ion-ios-star-outline': !vm.isFavourite(stop.StopCode1)}"></i>
+                </ion-item>
+                <ion-item class="item-calm item-icon-right" ng-if="stop.Towards">
+                    <h4>{{stop.Towards}}</h4>
+                    <span class="badge badge-assertive">{{stop.StopPointIndicator}}</span>
+                </ion-item>
+                <ion-item ng-animate="'animate'" class="bus-item" ng-repeat="item in stop.times |limitTo:15 | orderBy:'EstimatedTime'">
+                    {{item.LineID}} {{item.DestinationName}}
+                    <span class="badge">{{item.EstimatedTime | dueIn}}</span>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+    </ion-slide-box>
+</div>
+<div search-post-code="vm.settings" ng-if="vm.stops.status.code===416"></div>

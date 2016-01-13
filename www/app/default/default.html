@@ -1,0 +1,9 @@
+<ion-view class="bg-calm update-content" name="home-tab">
+    <ion-content>
+        <ion-refresher on-refresh="vm.doRefresh()" pulling-text="release to refresh" refreshing-text="refreshing" spinner="dots" class="spinner-energized">
+        </ion-refresher>
+        <div ng-include="'app/default/weather/weather.html'"></div>
+        <div ng-include="'app/default/train/train-list.html'"></div>
+        <div ng-include="'app/default/bus/bus-list.html'"></div>
+    </ion-content>
+</ion-view>

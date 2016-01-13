@@ -1,0 +1,7 @@
+<!-- Tube-->
+<ion-list loader="vm.trains.status">
+    <div class="item item-positive row train-status" ng-if="vm.trains" pop-up="app/default/train/train-status-detail.directive.html" data="vm.trains">
+        <span ng-repeat="train in vm.trains|orderBy:'disruption':'reverse'" class="col" style="background:{{train.color}};text-align:center;"><i ng-class="train.disruption?'ion-ios-information':'ion-ios-checkmark-outline'"></i>
+                </span>
+    </div>
+</ion-list>

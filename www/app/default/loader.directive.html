@@ -1,0 +1,12 @@
+<div class="item item-clear loader" ng-if="vm.status.type==='LOADING'">
+    <ion-spinner icon="spiral" class="spinner-light"></ion-spinner> <span>{{vm.status.message}}</span>
+</div>
+
+<div class="item item-clear item-assertive item-icon-left item-text-wrap" ng-if="vm.status.type==='ERROR'">
+    <i class=" icon ion-ios-information-outline"></i> {{vm.status.message}}
+</div>
+<div class="item item-clear item-energized item-icon-left item-text-wrap" ng-if="vm.status.type==='WARNING'">
+    <i class=" icon ion-ios-information-outline"></i> {{vm.status.message}}
+</div>
+
+<ng-transclude ng-if="!vm.status"></ng-transclude>

@@ -1,0 +1,17 @@
+<div class="modal full">
+    <ion-header-bar class="bar-positive">
+        <h2 class="title">Tube Update</h2>
+        <button class="button button-clear button-primary" ng-click="vm.hide()()">Done</button>
+    </ion-header-bar>
+    <ion-content class="update-content">
+    <div class="list no-lines">
+        <div ng-repeat-start="train in vm.data |orderBy:'disruption':'reverse'" class="item item-icon-right" style="background:{{train.color}};color:#fff;">
+            {{train.name}}
+            <i class="icon" ng-class="train.disruption?'ion-ios-information':'ion-ios-checkmark-outline'"></i>
+        </div>
+        <div ng-repeat-end  class="item item-text-wrap" ng-if="train.disruption">
+            {{train.deatil}}
+        </div>
+    </div>
+</ion-content>
+</div>

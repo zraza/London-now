@@ -1,0 +1,19 @@
+<ion-modal-view class="full modal">
+    <ion-header-bar class="bar-positive">
+        <h2 class="title">Settings</h2>
+        <button class="button button-clear button-primary" ng-click="vm.hide()">Done</button>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-divider item-calm">Search Bus Stops</ion-item>
+            <ion-radio ng-model="vm.data.busSearchType" ng-value="'CURRENT_LOCATION'" ng-click="vm.hide();vm.data.loadBusses()">Stops near me</ion-radio>
+            <ion-radio ng-model="vm.data.busSearchType" ng-value="'FAVOURITE_STOPS'" ng-click="vm.hide();vm.data.loadBusses()">My favourite stops</ion-radio>
+            <ion-radio ng-model="vm.data.busSearchType" ng-value="'POST_CODE'">Search by post code</ion-radio>
+            <div search-post-code="vm.data" after-search="vm.hide();vm.data.loadBusses()" ng-click="vm.data.busSearchType='POST_CODE'"></div>
+            
+        </ion-list>
+        <ion-list>
+            <a class="item item-icon-left item-assertive" rate-app><i class="icon ion-star"></i>Rate Application</a>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

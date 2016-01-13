@@ -1,0 +1,28 @@
+<div loader="vm.weather.status">
+<div class="item item-clear no-padding">
+<div class="row">
+    <h5 class="col">
+        <span id="temp-hi"><i class="icon ion-arrow-up-c"></i> <span>{{vm.weather.now.high}}</span>°</span>
+        <span id="temp-lo"><i class="icon ion-arrow-down-c"></i> <span>{{vm.weather.now.low}}</span>°</span>
+    </h5>
+    <span class="current-text col">{{vm.weather.now.text}}</span>
+    <div class="col" style="text-align:right;">
+        <div class="button-bar-icons" style="margin-top:-10px;">
+        <button class="button button-primary ion-ios-cog-outline" pop-up="app/default/settings.directive.html" data="vm.settings"></button>
+        <button class="button button-primary ion-ios-help-outline" pop-up="app/default/help.directive.html"></button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="item item-clear no-padding" ng-if="vm.weather" style="margin-top:1px;padding-top:0;" pop-up="app/default/weather/weather-detail.directive.html" data="vm.weather">
+<div class="row">
+    <div class="col">
+        <h1 class="current-temp"><span>{{vm.weather.now.temp}}</span>°</h1>
+    </div>
+    <div class="col">
+        <img ng-if="vm.weather.now.code!=='3200'" class="current-icon" ng-src="http://l.yimg.com/a/i/us/nws/weather/gr/{{vm.weather.now.code}}d.png" />
+    </div>
+</div>
+</div>
+</div>
